@@ -19,10 +19,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: ;
+
 }
 
-form {
+#changeGrid {
     display: flex;
     gap: 24px;
 }
@@ -35,6 +35,10 @@ input {
     border-radius: 8px;
 }
 
+input:focus {
+    outline-color: var(--primary);
+}
+
 button {
     height: 40px;
     padding: 0 16px;
@@ -42,6 +46,11 @@ button {
     border-radius: 8px;
     background-color: var(--primary);
     color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primaryHover);
 }
 
 .page-wrapper {
@@ -62,5 +71,15 @@ button {
 .grid {
     width: 768px;
     height: 768px;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    border: 1px solid var(--border);
+}
+
+.gridItem {
+    box-sizing: border-box;
 }
